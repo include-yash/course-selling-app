@@ -1,5 +1,6 @@
 import express from "express";
-
+import userRouter from "./routes/user";
+import courseRouter from "./routes/course";
 const app = express();
 
 app.get('/', function(req, res){
@@ -7,6 +8,9 @@ app.get('/', function(req, res){
         message : "Course Backend"
     })
 })
+
+app.use('/user', userRouter);
+app.use('/course', courseRouter);
 
 
 app.listen(3000, function(){
