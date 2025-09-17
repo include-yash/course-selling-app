@@ -1,6 +1,7 @@
 import express from "express";
-import userRouter from "./routes/user";
-import courseRouter from "./routes/course";
+import userRouter from "./routes/user.js";
+import courseRouter from "./routes/course.js";
+import { UserModel, CourseModel, AdminModel, PurchaseModel } from "./db.js";
 const app = express();
 
 app.get('/', function(req, res){
